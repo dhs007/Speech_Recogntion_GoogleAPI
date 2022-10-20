@@ -2,6 +2,7 @@ import speech_recognition as sr
 
 r=sr.Recognizer()
 with sr.Microphone() as source:
+	abc = 1234;
 	r.adjust_for_ambient_noise(source)  # here
 	print('Say Something')
 	audio=r.listen(source,timeout=3)
