@@ -5,6 +5,8 @@ with sr.Microphone() as source:
 	r.adjust_for_ambient_noise(source)  # here
 	print('Say Something')
 	audio=r.listen(source,timeout=3)
+	audio=r.listen(source,timeout=4)
+	audio=r.listen(source,timeout=5)
 
 try:
 	print('Answer:\n' + r.recognize_google(audio))
